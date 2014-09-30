@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.params=
+comment0.target=Messages()
+comment0.text=\n\ Constructor\ for\ the\ messaging\ system\n
+comment1.params=messageName
+comment1.target=MessageObject\ findMessage(java.lang.String)
+comment1.text=\n\ Finds\ the\ controller\ list\ for\ a\ specified\ message\ name\n\ \n\ @param\ messageName\ Name\ of\ message\ we're\ looking\ for\n\ @return\ The\ MessageObject\ if\ found,\ or\ null\ otherwise\n
+comment2.params=messageName\ mc
+comment2.target=void\ subscribe(java.lang.String,\ MessageController)
+comment2.text=\n\ Subscribe\ a\ controller\ so\ its\ notify\ method\ fired\ when\ message\ is\ published\n\ \n\ @param\ messageName\ Name\ of\ the\ message\n\ @param\ mc\ The\ Controller\ that\ is\ notified\ when\ messageName\ is\ published\n
+comment3.params=messageName\ data
+comment3.target=boolean\ notify(java.lang.String,\ MessageData)
+comment3.text=\n\ Call\ to\ send\ a\ message\ to\ the\ controllers\ that\ have\ subscribed\n\ \n\ @param\ messageName\ Name\ of\ the\ message\ to\ send\n\ @param\ data\ Data\ sent\ with\ the\ message.\ \ \n\ @return\ True\ if\ MessageObject\ was\ found\n
+comment4.params=messageName
+comment4.target=boolean\ notify(java.lang.String)
+numComments=5

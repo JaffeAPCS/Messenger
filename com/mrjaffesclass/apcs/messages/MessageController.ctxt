@@ -1,0 +1,4 @@
+#BlueJ class context
+comment0.params=messageName\ messageData
+comment0.target=void\ notify(java.lang.String,\ MessageData)
+numComments=1
