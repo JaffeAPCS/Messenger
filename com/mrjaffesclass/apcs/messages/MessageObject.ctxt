@@ -9,6 +9,6 @@ comment2.params=mc
 comment2.target=void\ addController(MessageController)
 comment2.text=\n\ Subscribes\ a\ controller\ to\ this\ message\n\ \n\ Input\:\n\ \ \ MessageController\ mc\:\ \ \ \ \ \ \ \ \ \ \ \ \ \ Controller\ that\ is\ subscribing\ to\ this\ message\n
 comment3.params=data
-comment3.target=void\ notify(MessageData)
+comment3.target=void\ notify(java.lang.Object)
 comment3.text=\n\ Fires\ the\ notify\ method\ of\ the\ controllers\ that\ subscribed\n\ \n\ @param\ Data\ that\ is\ sent\ with\ the\ message\n
 numComments=4

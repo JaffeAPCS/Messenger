@@ -7,10 +7,14 @@ package com.mrjaffesclass.apcs.messages;
  * message implementing the MessageData class
  * 
  * @author Roger Jaffe
- * @version 1.0
+ * @version 2014-09-30
  */
 public interface MessageController
 
 {
-    public void notify(String messageName, MessageData messageData);   
+    /**
+     * Fired when a message is sent through the Messages class that this
+     * controller has subscribed to.
+    */
+    public void messageHandler(String messageName, Object messagePayload);   
 }

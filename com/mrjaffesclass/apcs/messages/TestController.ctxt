@@ -1,6 +1,0 @@
-#BlueJ class context
-comment0.params=aNumber
-comment0.target=TestController(int)
-comment1.params=messageName\ messageData
-comment1.target=void\ notify(java.lang.String,\ MessageData)
-numComments=2

@@ -5,7 +5,7 @@ import java.util.*;
  * Contains a message name and a list of controllers that subscribe to the message
  * 
  * @author Roger Jaffe
- * @version 1.0
+ * @version 2014-09-30
  */
 public class MessageObject
 {
@@ -48,9 +48,9 @@ public class MessageObject
      * 
      * @param Data that is sent with the message
      */
-    public void notify(MessageData data) {
+    public void notify(Object data) {
         for (MessageController controller : list) {
-            controller.notify(messageName, data);
+            controller.messageHandler(messageName, data);
         }
     }
     

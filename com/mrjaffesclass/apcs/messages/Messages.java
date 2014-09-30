@@ -6,7 +6,7 @@ import java.util.*;
  * Implements messaging between controllers
  * 
  * @author Roger Jaffe
- * @version 1.0
+ * @version 2014-09-30
  */
 
 public class Messages
@@ -68,7 +68,7 @@ public class Messages
      * @param data Data sent with the message.  
      * @return True if MessageObject was found
      */
-    public boolean notify(String messageName, MessageData data) {
+    public boolean notify(String messageName, Object data) {
         MessageObject mo = findMessage(messageName);
         if (mo != null) {
             mo.notify(data);
