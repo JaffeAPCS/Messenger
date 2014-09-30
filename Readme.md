@@ -19,8 +19,7 @@ by Messages when the controller is subscribed to a message that is sent by itsel
 should pass the Messages instance to the controller in the controller's constructor; in this way, the controller
 can subscribe itself to messages and send messages to other controllers.
 
-##### Assume that all controllers have an instance variable <code>messenger</code> of class Messages that was passed from the
-app's initialization code.
+##### Assume that all controllers have an instance variable <code>messenger</code> of class Messages that was passed from the app's initialization code.
 
 #### Step 3: Use <code>messenger.subscribe(messageName, this)</code> to subscribe
 
