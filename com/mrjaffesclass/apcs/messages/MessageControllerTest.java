@@ -7,7 +7,7 @@ package com.mrjaffesclass.apcs.messages;
  * @author Roger Jaffe 
  * @version 2014-09-30
  */
-public class MessageControllerTest implements MessageController
+public class MessageControllerTest implements MessageMailbox
 {
     private String ident;         // Keeps the controller number
     

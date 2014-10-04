@@ -9,7 +9,7 @@ import java.util.*;
  * @version 2014-09-30
  */
 
-public class Messages
+public class Messaging
 {
     // Keeps our message list
     private List<MessageObject> messageList = new ArrayList<MessageObject>();
@@ -17,7 +17,7 @@ public class Messages
     /**
      * Constructor for the messaging system
      */
-    public Messages() {
+    public Messaging() {
         
     }
 
@@ -39,26 +39,36 @@ public class Messages
     }
 
     /**
-     * Subscribe a controller so its notify method fired when message is published
+     * Subscribe an object so its notify method fires when the message is sent
      * 
      * @param messageName Name of the message
-     * @param mc The Controller that is notified when messageName is published
+     * @param mc The object that is notified when messageName is published
      */
-    public void subscribe(String messageName, MessageController mc) {
+    public void subscribe(String messageName, MessageMailbox mc) {
         // See if we already have this message in the list
         MessageObject mo = findMessage(messageName);
         
         // If the message was found...
         if (mo != null) {
             // Add it to the list
-            mo.addController(mc);
+            mo.addObject(mc);
         } else {
             // Otherwise make a new MessageObject, add the controller to it, then add
             // the new MessageObject to the message objects in our list
             MessageObject newMessage = new MessageObject(messageName);
-            newMessage.addController(mc);
+            newMessage.addObject(mc);
             messageList.add(newMessage);
         }
+    }
+    
+    /**
+     * Call to send a message with no data to the controllers that have subscribed
+     * 
+     * @param messageName Name of the message to send
+     * @return True if MessageObject was found
+     */
+    public boolean notify(String messageName) {
+        return notify(messageName, null);
     }
     
     /**
@@ -76,8 +86,27 @@ public class Messages
         return (mo != null);
     }
     
-    public boolean notify(String messageName) {
-        return notify(messageName, null);
+    /**
+     * Call to send a message to the controllers that have subscribed
+     * and log the message and data if present to the console when debug is true
+     * 
+     * @param messageName Name of the message to send
+     * @param data Data sent with the message.  
+     * @param debug Set true for log messages to console
+     * @return True if MessageObject was found
+     */
+    public boolean notify(String messageName, Object data, boolean debug) {
+        if (debug) {
+            if (data != null) {
+                System.out.println("MSG: "+messageName+" | "+data.toString());
+            } else {
+                System.out.println("MSG: "+messageName+" | no data sent");
+            }
+        }
+        MessageObject mo = findMessage(messageName);
+        if (mo != null) {
+            mo.notify(data);
+        }
+        return (mo != null);
     }
-    
 }

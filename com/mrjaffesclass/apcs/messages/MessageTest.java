@@ -22,7 +22,7 @@ public class MessageTest
     private MessageControllerTest controllerA = new MessageControllerTest("A");
     private MessageControllerTest controllerB = new MessageControllerTest("B");
     private MessageControllerTest controllerC = new MessageControllerTest("C");
-    private Messages m = new Messages();
+    private Messaging m = new Messaging();
     /**
      * Constructor for the MessageTest class
      * which will subscribe the three controllers to a subset of the 
@@ -47,7 +47,7 @@ public class MessageTest
      * Send message 1 to the controllers that have subscribed to it
      */
     public void sendMessage1() {
-        m.notify("Message1");
+        m.notify("Message1", null, true);
     }
 
     /**

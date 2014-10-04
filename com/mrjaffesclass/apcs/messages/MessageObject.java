@@ -12,7 +12,7 @@ public class MessageObject
     // Message name and
     // List of controllers subscribing to this message
     private String messageName;
-    private ArrayList<MessageController> list = new ArrayList<MessageController>();
+    private ArrayList<MessageMailbox> list = new ArrayList<MessageMailbox>();
     
     /**
      * Constructor
@@ -39,7 +39,7 @@ public class MessageObject
      * Input:
      *   MessageController mc:              Controller that is subscribing to this message
      */
-    public void addController(MessageController mc) {
+    public void addObject(MessageMailbox mc) {
         list.add(mc);
     }
     
@@ -49,8 +49,8 @@ public class MessageObject
      * @param Data that is sent with the message
      */
     public void notify(Object data) {
-        for (MessageController controller : list) {
-            controller.messageHandler(messageName, data);
+        for (MessageMailbox anObject : list) {
+            anObject.messageHandler(messageName, data);
         }
     }
     
