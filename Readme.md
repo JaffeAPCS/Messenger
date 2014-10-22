@@ -1,5 +1,7 @@
 ### Messaging for controller communication in MVC Java framework programs
 
+### Deprecated 2014-10-20 in favor of Messenger class that supports multiple message namespaces
+
 This java package includes classes necessary to include messaging between controllers in an MVC framework
 Java application.
 
