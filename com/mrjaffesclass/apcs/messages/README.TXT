@@ -1,1 +1,0 @@
-Please see the Readme.md markdown code hosted in Github for full documentation
