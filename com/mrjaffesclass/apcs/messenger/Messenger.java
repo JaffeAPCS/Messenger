@@ -118,7 +118,7 @@ public class Messenger
     /**
      * Log message and data to the console
      * @param messageName   Message name
-     * @param payload          Payload data
+     * @param payload       Payload data
      */
     public void logMessage(String messageName, Object payload) {
         if (payload != null) {
