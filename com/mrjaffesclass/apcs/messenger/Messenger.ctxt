@@ -22,5 +22,5 @@ comment6.target=boolean\ notify(java.lang.String,\ java.lang.Object,\ boolean)
 comment6.text=\n\ Call\ to\ send\ a\ message\ to\ the\ controllers\ that\ have\ subscribed\n\ and\ log\ the\ message\ and\ data\ if\ present\ to\ the\ console\ when\ debug\ is\ true\n\ \n\ @param\ messageName\ Name\ of\ the\ message\ to\ send\n\ @param\ payload\ Data\ sent\ with\ the\ message.\ \ \n\ @param\ debug\ Set\ true\ for\ log\ messages\ to\ console\n\ @return\ True\ if\ MessageObject\ was\ found\n
 comment7.params=messageName\ payload
 comment7.target=void\ logMessage(java.lang.String,\ java.lang.Object)
-comment7.text=\n\ Log\ message\ and\ data\ to\ the\ console\n\ @param\ messageName\ \ \ Message\ name\n\ @param\ payload\ \ \ \ \ \ \ \ \ \ Payload\ data\n
+comment7.text=\n\ Log\ message\ and\ data\ to\ the\ console\n\ @param\ messageName\ \ \ Message\ name\n\ @param\ payload\ \ \ \ \ \ \ Payload\ data\n
 numComments=8
